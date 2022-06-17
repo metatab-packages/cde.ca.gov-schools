@@ -2,20 +2,20 @@ Declare,metatab-latest
 Title,California Schools and Districts
 Description,"California public schools, private schools and  districts."
 Identifier,01f8c68a-0b8a-4d9e-b6b9-b6654895b859
-Name,cde.ca.gov-schools-1.1.1
+Name,cde.ca.gov-schools-2.1.1
 Dataset,schools
 Origin,cde.ca.gov
 Time,
 Space,
 Grain,
 Variant,
-Version,1.1.1
-Version.Major,1
+Version,2.1.1
+Version.Major,2
 Version.Minor,1
 Version.Patch,1
 Created,2019-06-16T09:18:56
-Modified,2021-02-25T05:54:03
-Giturl,https://github.com/metatab-packages/cde.ca.gov.git
+Modified,2022-06-17T17:11:35
+Giturl,https://github.com/metatab-packages/cde.ca.gov-schools.git
 ""
 Section,Contacts,Email,Organization,Url
 Wrangler,Eric Busboom,eric@civicknowledge.com,Civic Knowledge,http://civicknowledge.com
@@ -23,81 +23,20 @@ Wrangler,Eric Busboom,eric@civicknowledge.com,Civic Knowledge,http://civicknowle
 Section,Documentation,Title,Description,
 Documentation,file:README.md,README,,
 Downloadpage,https://www.cde.ca.gov/ds/si/ds/pubschls.asp,Public Schools Download Page,,
-Downloadpage,https://www.cde.ca.gov/ds/si/ps/index.asp,Private Schhols Download Page,,
+Downloadpage,https://www.cde.ca.gov/ds/si/ps/index.asp,Private Schools Download Page,,
 ""
 Section,References,Name,Description,
+Reference,https://www.cde.ca.gov/ds/si/ps/documents/privateschools1819.xlsx#headers=2&start=3,private_schools_2018,,
+Reference,https://www.cde.ca.gov/ds/si/ps/documents/privateschools1920.xlsx#headers=2&start=3,private_schools_2019,,
+Reference,https://www.cde.ca.gov/ds/si/ps/documents/privateschools2021.xlsx#headers=2&start=3,private_schools_2020,,
+Reference,https://www.cde.ca.gov/ds/si/ps/documents/privateschools2122.xlsx#headers=2&start=3,private_schools_2021,,
 ""
 Section,Resources,Name,Description,
 Datafile,https://www.cde.ca.gov/schooldirectory/report?rid=dl1&tp=txt#target_format=tsv,public_schools,,
 Datafile,https://www.cde.ca.gov/schooldirectory/report?rid=dl2&tp=txt#target_format=tsv,school_districts,,
-Datafile,https://www.cde.ca.gov/ds/si/ps/documents/privateschools1819.xlsx#headers=2&start=3,private_schools_2019,,
+Datafile,notebooks/extract.ipynb#df,private_schools,,
 ""
 Section,Schema,DataType,Description,Altname,Has_Codes
-Table,private_schools_2019,,,,
-Table.Column,Affidavit ID,integer,,affidavit_id,
-Table.Column,County,string,County,county,
-Table.Column,CDS Code,integer,,cds_code,
-Table.Column,School,text,School,school,
-Table.Column,Street,string,Street,street,
-Table.Column,City,text,City,city,
-Table.Column,State,string,State,state,
-Table.Column,Zip,integer,Zip,zip,
-Table.Column,Mailing Street,string,,mailing_street,
-Table.Column,Mailing City,string,,mailing_city,
-Table.Column,Mailing State,string,,mailing_state,
-Table.Column,Mailing Zip,string,,mailing_zip,
-Table.Column,Area Code,integer,,area_code,T
-Table.Column,Phone Prefix,integer,,phone_prefix,T
-Table.Column,Phone Suffix,integer,,phone_suffix,T
-Table.Column,Email,string,Email,email,
-Table.Column,Email2,string,Email2,email2,
-Table.Column,Public District,string,,public_district,
-Table.Column,Administrator Salutation,string,,administrator_salutation,
-Table.Column,Administrator First Name,text,,administrator_first_name,
-Table.Column,Administrator Last Name,text,,administrator_last_name,
-Table.Column,Administrator Title,string,,administrator_title,
-Table.Column,Administrator Email,string,,administrator_email,
-Table.Column,School Type,string,,school_type,
-Table.Column,School Accommodations,string,,school_accommodations,
-Table.Column,Low Grade,string,,low_grade,
-Table.Column,High Grade,integer,,high_grade,T
-Table.Column,Diploma Offered?,string,,diploma_offered,
-Table.Column,Kindergarten Enrollment,integer,,kindergarten_enrollment,
-Table.Column,Grade 1 Enrollment,integer,,grade_1_enrollment,
-Table.Column,Grade 2 Enrollment,integer,,grade_2_enrollment,
-Table.Column,Grade 3 Enrollment,integer,,grade_3_enrollment,
-Table.Column,Grade 4 Enrollment,integer,,grade_4_enrollment,
-Table.Column,Grade 5 Enrollment,integer,,grade_5_enrollment,
-Table.Column,Grade 6 Enrollment,integer,,grade_6_enrollment,
-Table.Column,Grade 7 Enrollment,integer,,grade_7_enrollment,
-Table.Column,Grade 8 Enrollment,integer,,grade_8_enrollment,
-Table.Column,Grade 9 Enrollment,integer,,grade_9_enrollment,
-Table.Column,Grade 10 Enrollment,integer,,grade_10_enrollment,
-Table.Column,Grade 11 Enrollment,integer,,grade_11_enrollment,
-Table.Column,Grade 12 Enrollment,integer,,grade_12_enrollment,
-Table.Column,Ungraded Elementary Enrollment,integer,,ungraded_elementary_enrollment,
-Table.Column,Ungraded Secondary Enrollment,integer,,ungraded_secondary_enrollment,
-Table.Column,Total Enrollment,integer,,total_enrollment,
-Table.Column,Graduates 2017-18,integer,,graduates_2017_18,
-Table.Column,Full Time Teachers,integer,,full_time_teachers,
-Table.Column,Part Time Teachers,number,,part_time_teachers,
-Table.Column,Administrative Staff,number,,administrative_staff,
-Table.Column,Other Staff,integer,,other_staff,
-Table.Column,Tax Exempt 501,string,,tax_exempt_501,
-Table.Column,Tax Exempt 23701,string,,tax_exempt_23701,
-Table.Column,Tax Exempt 214,string,,tax_exempt_214,
-Table.Column,Tax Exempt,string,,tax_exempt,
-Table.Column,Religious Denomination,string,,religious_denomination,
-Table.Column,Religious Classification,string,,religious_classification,
-Table.Column,Director/Principal Officer Salutation,string,,director_principal_officer_salutation,
-Table.Column,Director/Principal Officer First Name,string,,director_principal_officer_first_name,
-Table.Column,Director/Principal Officer Last Name,text,,director_principal_officer_last_name,
-Table.Column,Director/Principal Officer Title,string,,director_principal_officer_title,
-Table.Column,Director/Principal Officer Email,text,,director_principal_officer_email,
-Table.Column,Custodian of Records Salutation,string,,custodian_of_records_salutation,
-Table.Column,Custodian of Records First Name,text,,custodian_of_records_first_name,
-Table.Column,Custodian of Records Last Name,text,,custodian_of_records_last_name,
-Table.Column,Custodian of Records Email,string,,custodian_of_records_email,
 Table,public_schools,,,,
 Table.Column,CDSCode,integer,"This 14-digit code is the official, unique identification of a school 
 within California. The first two digits identify the county, the next five 
@@ -346,3 +285,72 @@ Table.Column,DOC,integer,DOC,doc,
 Table.Column,DOCType,string,DOCType,doctype,
 Table.Column,StatusType,string,StatusType,statustype,
 Table.Column,LastUpDate,date,LastUpDate,lastupdate,
+Table,private_schools,,,,
+Table.Column,year,integer,,,
+Table.Column,Affidavit ID,integer,,affidavit_id,
+Table.Column,CDS Code,integer,,cds_code,
+Table.Column,County,string,,county,
+Table.Column,District,string,,district,
+Table.Column,School,text,,school,
+Table.Column,School Type,string,,school_type,
+Table.Column,School Accommodations,string,,school_accommodations,
+Table.Column,Religious Denomination,string,,religious_denomination,
+Table.Column,Religious Classification,string,,religious_classification,
+Table.Column,Low Grade,string,,low_grade,
+Table.Column,High Grade,string,,high_grade,
+Table.Column,Grade K Enroll,integer,,grade_k_enroll,
+Table.Column,Grade 1 Enroll,integer,,grade_1_enroll,
+Table.Column,Grade 2 Enroll,integer,,grade_2_enroll,
+Table.Column,Grade 3 Enroll,integer,,grade_3_enroll,
+Table.Column,Grade 4 Enroll,integer,,grade_4_enroll,
+Table.Column,Grade 5 Enroll,integer,,grade_5_enroll,
+Table.Column,Grade 6 Enroll,integer,,grade_6_enroll,
+Table.Column,Grade 7 Enroll,integer,,grade_7_enroll,
+Table.Column,Grade 8 Enroll,integer,,grade_8_enroll,
+Table.Column,Grade 9 Enroll,integer,,grade_9_enroll,
+Table.Column,Grade 10 Enroll,integer,,grade_10_enroll,
+Table.Column,Grade 11 Enroll,integer,,grade_11_enroll,
+Table.Column,Grade 12 Enroll,integer,,grade_12_enroll,
+Table.Column,Ungraded Elem Enroll,integer,,ungraded_elem_enroll,
+Table.Column,Ungraded Sec Enroll,integer,,ungraded_sec_enroll,
+Table.Column,Total Enroll,integer,,total_enroll,
+Table.Column,Graduates 2017-18,integer,,graduates_2017_18,
+Table.Column,Previous Year Grads,integer,,previous_year_grads,
+Table.Column,Diploma Offered?,string,,diploma_offered,
+Table.Column,Full Time Teachers,integer,,full_time_teachers,
+Table.Column,Part Time Teachers,number,,part_time_teachers,
+Table.Column,Administrators,number,,administrators,
+Table.Column,Other Staff,integer,,other_staff,
+Table.Column,Street,string,,street,
+Table.Column,City,text,,city,
+Table.Column,State,string,,state,
+Table.Column,Zip,integer,,zip,T
+Table.Column,Mail Street,string,,mail_street,
+Table.Column,Mail City,string,,mail_city,
+Table.Column,Mail State,string,,mail_state,
+Table.Column,Mail Zip,string,,mail_zip,
+Table.Column,School Phone Number,string,,school_phone_number,
+Table.Column,Area Code,integer,,area_code,T
+Table.Column,Phone Prefix,integer,,phone_prefix,T
+Table.Column,Phone Suffix,integer,,phone_suffix,T
+Table.Column,Email,string,,email,
+Table.Column,Email2,string,,email2,
+Table.Column,Administrator Salutation,string,,administrator_salutation,
+Table.Column,Administrator First Name,text,,administrator_first_name,
+Table.Column,Administrator Last Name,text,,administrator_last_name,
+Table.Column,Administrator Title,string,,administrator_title,
+Table.Column,Administrator Email,string,,administrator_email,
+Table.Column,Director Salutation,string,,director_salutation,
+Table.Column,Director First Name,text,,director_first_name,
+Table.Column,Director Last Name,text,,director_last_name,
+Table.Column,Director Title,string,,director_title,
+Table.Column,Director Email,text,,director_email,
+Table.Column,Custodian of Records Salutation,string,,custodian_of_records_salutation,
+Table.Column,Custodian of Records First Name,text,,custodian_of_records_first_name,
+Table.Column,Custodian of Records Last Name,text,,custodian_of_records_last_name,
+Table.Column,Custodian of Records Email,text,,custodian_of_records_email,
+Table.Column,Tax Exempt 501,string,,tax_exempt_501,
+Table.Column,Tax Exempt 23701,string,,tax_exempt_23701,
+Table.Column,Tax Exempt 27301,string,,tax_exempt_27301,
+Table.Column,Tax Exempt 214,string,,tax_exempt_214,
+Table.Column,Tax Exempt,string,,tax_exempt,
